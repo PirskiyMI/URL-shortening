@@ -1,0 +1,66 @@
+.header {
+   height: 100px;
+   display: flex;
+   align-items: center;
+   user-select: none;
+   &_container {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+   }
+   &_logo {
+      font-weight: var(--fw-bold);
+      font-size: 30px;
+      flex: 0 0 120px;
+   }
+   &_menu {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      color: var(--color-neutral-grayishViolet);
+      font-weight: var(--fw-bold);
+      flex: 1 1 100%;
+   }
+   &_nav {
+      align-self: center;
+   }
+   &_list {
+      display: flex;
+      gap: 20px;
+   }
+   &_item {
+      transition: color ease 0.2s;
+      &:hover {
+         color: var(--color-neutral-violet);
+      }
+   }
+   &_login {
+      display: flex;
+      gap: 20px;
+   }
+   &_burger {
+      span,
+      span::before,
+      span::after {
+         display: block;
+         width: 30px;
+         height: 2px;
+         border-radius: 2px;
+         background-color: var(--color-neutral-grayishViolet);
+      }
+      span {
+         position: relative;
+      }
+      span::before,
+      span::after {
+         content: '';
+         position: absolute;
+      }
+      span::before {
+         top: -8px;
+      }
+      span::after {
+         top: 8px;
+      }
+   }
+}

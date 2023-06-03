@@ -10,11 +10,19 @@ a {
    text-decoration: none;
 }
 
+li {
+   list-style:  none;
+}
+
 button {
    border: none;
    background: none;
    font-size: inherit;
    line-height: inherit;
+   font-family: inherit;
+   font-weight: inherit;
+   cursor: pointer;
+   color:  inherit;
 }
 
 :root {
@@ -46,6 +54,7 @@ body {
 
 ._container {
    padding: 0 15px;
-   max-width: 1470px;
+   width: 100%;
+   max-width: 1200px;
    margin: 0 auto;
 }

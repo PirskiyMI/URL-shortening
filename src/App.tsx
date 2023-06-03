@@ -1,7 +1,11 @@
-import { Button } from "./assets/components/Button/Button";
+import { Header } from './components/Header/Header';
 
 function App() {
-   return <div> <Button onClick={() => {console.log('Нажата')}}>Get started</Button></div>;
+   return (
+      <div>
+         <Header />
+      </div>
+   );
 }
 
 export default App;
