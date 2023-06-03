@@ -10,6 +10,13 @@ a {
    text-decoration: none;
 }
 
+button {
+   border: none;
+   background: none;
+   font-size: inherit;
+   line-height: inherit;
+}
+
 :root {
    /* Colors */
    --color-primary-cyan: hsl(180, 66%, 49%);

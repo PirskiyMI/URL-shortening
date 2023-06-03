@@ -1,0 +1,12 @@
+.button {
+   padding: 15px 30px;
+   font-weight: var(--fw-bold);
+   text-transform: capitalize;
+   color: white;
+   background-color: var(--color-primary-cyan);
+   border-radius: 30px;
+   transition: opacity ease .2s;
+   &:hover {
+      opacity: 0.6;
+   }
+}
