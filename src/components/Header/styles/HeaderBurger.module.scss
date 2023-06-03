@@ -1,0 +1,46 @@
+.header {
+   &_burger {
+      display: none;
+      min-width: 32px;
+      span,
+      span::before,
+      span::after {
+         display: block;
+         width: 30px;
+         height: 2px;
+         border-radius: 2px;
+         background-color: var(--color-neutral-grayishViolet);
+      }
+      span {
+         position: relative;
+         width: 16px;
+      }
+      span::before,
+      span::after {
+         content: '';
+         position: absolute;
+      }
+      span::before {
+         top: -8px;
+         width: 32px;
+      }
+      span::after {
+         top: 8px;
+         width: 8px;
+      }
+      span,
+      span::after {
+         transition: all ease-in-out 0.2s;
+      }
+      &__active {
+         span,
+         span::after {
+            width: 32px;
+            background-color: var(--color-primary-cyan);
+         }
+      }
+      @media (max-width: 700px) {
+         display: block;
+      }
+   }
+}
