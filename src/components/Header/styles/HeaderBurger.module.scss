@@ -1,6 +1,6 @@
 .header {
    &_burger {
-      display: none;
+      display: block;
       min-width: 32px;
       span,
       span::before,
@@ -39,8 +39,8 @@
             background-color: var(--color-primary-cyan);
          }
       }
-      @media (max-width: 700px) {
-         display: block;
+      @media (min-width: 700px) {
+         display: none;
       }
    }
 }

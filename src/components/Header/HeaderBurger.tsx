@@ -1,6 +1,6 @@
 import styles from './styles/HeaderBurger.module.scss';
 import cn from 'classnames';
-import { HeaderBurgerProps } from './types/types';
+import { HeaderBurgerProps } from './types';
 
 export const HeaderBurger = ({ menuIsActive, onClick }: HeaderBurgerProps) => {
    return (

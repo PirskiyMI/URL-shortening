@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 import { Button } from '../Button/Button';
 import { HeaderNav } from './HeaderNav';
-import { HeaderMenuProps } from './types/types';
+import { HeaderMenuProps } from './types';
 import { useResize } from '../../hooks/useResize';
 
 export const HeaderMenu = ({ menuIsActive }: HeaderMenuProps) => {
@@ -25,9 +25,9 @@ export const HeaderMenu = ({ menuIsActive }: HeaderMenuProps) => {
             <AnimatePresence>
                {menuIsActive && (
                   <motion.div
-                     initial={{x: '-60%', opacity: 0 }}
-                     animate={{x: '-50%', opacity: 1 }}
-                     exit={{x: '-60%', opacity: 0 }}
+                     initial={{ x: '-60%', opacity: 0 }}
+                     animate={{ x: '-50%', opacity: 1 }}
+                     exit={{ x: '-60%', opacity: 0 }}
                      className={styles.header_menu}>
                      <HeaderNav />
                      <div className={styles.header_login}>

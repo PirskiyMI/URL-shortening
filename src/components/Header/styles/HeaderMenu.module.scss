@@ -6,9 +6,14 @@
       color: var(--color-neutral-grayishViolet);
       font-weight: var(--fw-bold);
       flex: 1 1 100%;
-      @media (max-width: 700px) {
+   }
+   &_login {
+      display: flex;
+      gap: 20px;
+   }
+   @media (max-width: 700px) {
+      &_menu {
          padding: 20px 0;
-         display: flex;
          flex-direction: column;
          align-items: center;
          width: 300px;
@@ -20,11 +25,7 @@
          border-radius: 15px;
          position: absolute;
       }
-   }
-   &_login {
-      display: flex;
-      gap: 20px;
-      @media (max-width: 700px) {
+      &_login {
          flex-direction: column;
       }
    }
