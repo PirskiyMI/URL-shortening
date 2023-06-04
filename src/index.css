@@ -25,6 +25,12 @@ button {
    color:  inherit;
 }
 
+p,h1,h2,h3,h4,h5,h6 {
+   font-size: inherit;
+   font-weight: inherit;
+   line-height: inherit;
+}
+
 :root {
    /* Colors */
    --color-primary-cyan: hsl(180, 66%, 49%);
@@ -48,7 +54,7 @@ body {
    font-weight: var(--fw-normal);
    line-height: 120%;
    width: 100vw;
-   height: 200vh;
+   min-height: 100vh;
    overflow-x: hidden;
 }
 

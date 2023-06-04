@@ -1,4 +1,3 @@
-import cn from 'classnames';
 import styles from './styles/HeaderMenu.module.scss';
 
 import { motion, AnimatePresence } from 'framer-motion';
