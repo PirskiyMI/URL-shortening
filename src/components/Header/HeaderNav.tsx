@@ -1,6 +1,7 @@
 import { HeaderLink } from './HeaderLink';
 import styles from './styles/HeaderNav.module.scss';
 
+
 const linksAddresses = [
    { id: 1, address: '#', title: 'Features' },
    { id: 2, address: '#', title: 'Pricing' },
