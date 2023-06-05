@@ -27,7 +27,7 @@ export const FooterSocials = ({ socials }: FooterSocialsProps) => {
          {socials.map(({ id, icon: SVG, alt }: ISocial) => (
             <li className={styles.socials_item} key={id}>
                <a href="#" className={styles.socials_link} aria-label={alt}>
-                  <SVG />
+                  <SVG className={styles.socials_icon}/>
                </a>
             </li>
          ))}
