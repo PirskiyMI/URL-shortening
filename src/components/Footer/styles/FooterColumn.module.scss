@@ -15,7 +15,7 @@
       transition: color ease 0.2s;
       @media (any-hover: hover) {
          &:hover {
-            color: white;
+            color: var(--color-primary-cyan);
          }
       }
    }

@@ -5,8 +5,9 @@
       z-index: 1;
    }
    &_body {
-      padding: 40px;
+      padding: 40px 20px;
       display: flex;
+      flex-direction: column;
       gap: 20px;
       background: var(--color-primary-violet) url(./../../../assets/images/bg-boost-desktop.svg)
          no-repeat center / cover;
@@ -14,9 +15,16 @@
    }
    &_input {
       padding: 0 20px;
+      min-height: 50px;
       display: flex;
       align-items: center;
       flex: 1 1 auto;
       border-radius: 10px;
+   }
+   @media (min-width: 566px) {
+      &_body {
+         padding: 40px;
+         flex-direction: row;
+      }
    }
 }

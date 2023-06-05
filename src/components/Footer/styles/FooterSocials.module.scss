@@ -7,7 +7,7 @@
       transition: fill ease 0.2s;
       @media (any-hover: hover) {
          &:hover {
-            fill: white;
+            fill: var(--color-primary-cyan);
          }
       }
    }

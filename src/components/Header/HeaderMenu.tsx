@@ -17,7 +17,7 @@ export const HeaderMenu = ({ menuIsActive }: HeaderMenuProps) => {
                <HeaderNav />
                <div className={styles.header_login}>
                   <button className={styles.header_item}>Login</button>
-                  <Button>sign up</Button>
+                  <Button type="button">sign up</Button>
                </div>
             </div>
          )}
@@ -32,7 +32,7 @@ export const HeaderMenu = ({ menuIsActive }: HeaderMenuProps) => {
                      <HeaderNav />
                      <div className={styles.header_login}>
                         <button className={styles.header_item}>Login</button>
-                        <Button>sign up</Button>
+                        <Button type="button">sign up</Button>
                      </div>
                   </motion.div>
                )}

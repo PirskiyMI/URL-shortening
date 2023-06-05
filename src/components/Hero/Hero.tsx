@@ -16,7 +16,7 @@ export const Hero = () => {
                      performing.
                   </p>
                </div>
-               <Button>get started</Button>
+               <Button type='button'>get started</Button>
             </div>
             <div className={styles.hero_background}>
                <img className={styles.hero_image} src={image} alt="Man sitting at the computer"/>

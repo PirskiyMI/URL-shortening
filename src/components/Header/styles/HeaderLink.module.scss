@@ -1,0 +1,10 @@
+.header {
+   &_item {
+      transition: color ease 0.2s;
+      @media (any-hover: hover) {
+         &:hover {
+            color: var(--color-neutral-violet);
+         }
+      }
+   }
+}
