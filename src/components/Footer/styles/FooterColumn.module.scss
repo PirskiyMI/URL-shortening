@@ -1,0 +1,22 @@
+.column {
+   display: flex;
+   flex-direction: column;
+   gap: 14px;
+   font-size: 0.9rem;
+   text-transform: capitalize;
+   &_title {
+      font-weight: var(--fw-bold);
+   }
+   &_list {
+      color: var(--color-neutral-gray);
+      line-height: 2rem;
+   }
+   &_item {
+      transition: color ease 0.2s;
+      @media (any-hover: hover) {
+         &:hover {
+            color: white;
+         }
+      }
+   }
+}

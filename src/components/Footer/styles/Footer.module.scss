@@ -27,11 +27,6 @@
       gap: 30px;
       text-align: center;
    }
-   &_column {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-   }
    @media (min-width: 400px) {
       &_columns {
          flex: 0 0 60%;
@@ -47,10 +42,6 @@
       &_logo {
          flex: 0 0 150px;
       }
-      
-      &_column {
-         flex-basis: 120px;
-      }
    }
    @media (min-width: 560px) {
       &_container {
@@ -65,36 +56,3 @@
    }
 }
 
-.column {
-   font-size: 0.9rem;
-   &_title {
-      font-weight: var(--fw-bold);
-   }
-   &_list {
-      color: var(--color-neutral-gray);
-      line-height: 2rem;
-      text-transform: capitalize;
-   }
-   &_item {
-      transition: color ease 0.2s;
-      @media (any-hover: hover) {
-         &:hover {
-            color: white;
-         }
-      }
-   }
-   &_link {
-   }
-}
-
-.socials {
-   display: flex;
-   align-items: center;
-   gap: 20px;
-   &_icon {
-      fill: var(--color-neutral-gray);
-   }
-   @media (min-width: 500px) {
-      align-self: start;
-   }
-}

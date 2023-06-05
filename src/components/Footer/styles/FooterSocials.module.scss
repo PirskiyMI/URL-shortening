@@ -1,0 +1,17 @@
+.socials {
+   display: flex;
+   align-items: center;
+   gap: 20px;
+   &_icon {
+      fill: var(--color-neutral-gray);
+      transition: fill ease 0.2s;
+      @media (any-hover: hover) {
+         &:hover {
+            fill: white;
+         }
+      }
+   }
+   @media (min-width: 500px) {
+      align-self: start;
+   }
+}

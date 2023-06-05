@@ -12,7 +12,7 @@ export const Header = () => {
    return (
       <header className={styles.header}>
          <div className={cn(styles.header_container, '_container')}>
-            <Logo />
+            <Logo color='var(--color-primary-violet)'/>
             <HeaderMenu menuIsActive={menuActive} />
             <HeaderBurger menuIsActive={menuActive} onClick={() => setMenuActive(!menuActive)} />
          </div>

@@ -1,10 +1,13 @@
-import styles from './Logo.module.scss';
 import { ReactComponent as LogoIcon } from './../../assets/images/logo.svg';
 
-export const Logo = () => {
+interface LogoProps {
+   color: string;
+}
+
+export const Logo = ({ color }: LogoProps) => {
    return (
-      <a href="#" className={styles.logo}>
-         <LogoIcon />
+      <a href="#">
+         <LogoIcon style={{ fill: `${color}` }} />
       </a>
    );
 };
