@@ -1,0 +1,22 @@
+.form {
+   margin-bottom: -65px;
+   &_container {
+      position: relative;
+      z-index: 1;
+   }
+   &_body {
+      padding: 40px;
+      display: flex;
+      gap: 20px;
+      background: var(--color-primary-violet) url(./../../../assets/images/bg-boost-desktop.svg)
+         no-repeat center / cover;
+      border-radius: 10px;
+   }
+   &_input {
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      flex: 1 1 auto;
+      border-radius: 10px;
+   }
+}

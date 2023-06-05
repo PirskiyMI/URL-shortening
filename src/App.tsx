@@ -3,6 +3,7 @@ import { Hero } from './components/Hero/Hero';
 import { Stat } from './components/Stat/Stat';
 import { CallToAction } from './components/CallToAction/CallToAction';
 import { Footer } from './components/Footer/Footer';
+import { Form } from './components/Form/Form';
 
 function App() {
    return (
@@ -10,6 +11,7 @@ function App() {
          <Header />
          <main>
             <Hero />
+            <Form />
             <Stat />
             <CallToAction />
          </main>
