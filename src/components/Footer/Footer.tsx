@@ -2,6 +2,7 @@ import styles from './styles/Footer.module.scss';
 import cn from 'classnames';
 import { data } from './constants';
 import { FooterColumnProps, FooterSocialsProps, ILink, ISocial } from './types';
+import { Logo } from '../Logo/Logo';
 
 export const FooterColumn = ({ title, links }: FooterColumnProps) => {
    return (
@@ -38,9 +39,7 @@ export const Footer = () => {
    return (
       <footer className={styles.footer}>
          <div className={cn(styles.footer_container, '_container')}>
-            <a href="#" className={styles.footer_logo}>
-               Shortly
-            </a>
+            <Logo/>
             <nav className={styles.footer_nav}>
                <div className={styles.footer_columns}>
                   {data.columns.map(({ id, ...props }) => (
