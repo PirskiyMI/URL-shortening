@@ -1,7 +1,6 @@
 import styles from './styles/HeaderMenu.module.scss';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useResize } from '../../hooks/useResize';
-import { useState } from 'react';
 import { useAppDispatch } from '../../hooks/useAppDispatch';
 
 import { Button } from '../Button/Button';

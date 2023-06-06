@@ -14,23 +14,19 @@ function App() {
    const { registrationModal, loginModal } = useAppSelector((state) => state.modalReducer);
 
    return (
-      <div style={{overflow: `${registrationModal && 'hidden'}`}}>
+      <div style={{ overflow: `${registrationModal && 'hidden'}` }}>
          <Header />
          <main>
             <Hero />
             <Form />
             <Stat />
             <CallToAction />
-            {registrationModal && (
-               <Modal>
-                  <SignUp />
-               </Modal>
-            )}
-            {loginModal && (
-               <Modal>
-                  <SignIn />
-               </Modal>
-            )}
+            <Modal isActive={registrationModal}>
+               <SignUp />
+            </Modal>
+            <Modal isActive={loginModal}>
+               <SignIn />
+            </Modal>
          </main>
          <Footer />
       </div>
