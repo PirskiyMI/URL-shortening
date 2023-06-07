@@ -1,10 +1,12 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import userReducer from './slices/userSlice';
 import modalReducer from './slices/modalSlice';
+import errorReducer from './slices/authErrorSlice';
 
 const rootReducer = combineReducers({
    userReducer,
    modalReducer,
+   errorReducer,
 });
 
 export const setupStore = () => {

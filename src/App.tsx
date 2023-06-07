@@ -16,17 +16,17 @@ function App() {
    return (
       <div style={{ overflow: `${registrationModal && 'hidden'}` }}>
          <Header />
+         <Modal isActive={registrationModal}>
+            <SignUp />
+         </Modal>
+         <Modal isActive={loginModal}>
+            <SignIn />
+         </Modal>
          <main>
             <Hero />
             <Form />
             <Stat />
             <CallToAction />
-            <Modal isActive={registrationModal}>
-               <SignUp />
-            </Modal>
-            <Modal isActive={loginModal}>
-               <SignIn />
-            </Modal>
          </main>
          <Footer />
       </div>

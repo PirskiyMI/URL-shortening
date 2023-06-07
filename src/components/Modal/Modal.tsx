@@ -4,6 +4,7 @@ import { useAppDispatch } from '../../hooks/useAppDispatch';
 import { setLoginModal, setRegistrationModal } from '../../store/slices/modalSlice';
 import { useAppSelector } from '../../hooks/useAppSelector';
 import { AnimatePresence, motion } from 'framer-motion';
+import { removeError } from '../../store/slices/authErrorSlice';
 
 interface ModalProps {
    isActive: boolean;
@@ -25,6 +26,7 @@ export const Modal: FC<ModalProps> = ({ isActive, children }) => {
                onClick={(e: any) => {
                   if (e.target.classList.contains(`${styles.modal}`) && loginModal) {
                      dispatch(setLoginModal(false));
+                     dispatch(removeError());
                   } else if (e.target.classList.contains(`${styles.modal}`) && registrationModal) {
                      dispatch(setRegistrationModal(false));
                   }

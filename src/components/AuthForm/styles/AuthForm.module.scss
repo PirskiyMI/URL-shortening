@@ -1,0 +1,30 @@
+.form {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 30px;
+   &_label {
+      width: 100%;
+      position: relative;
+   }
+   &_field {
+      width: 100%;
+      padding: 10px 15px;
+      border-radius: 10px;
+      border: 2px solid black;
+      transition: border-color ease 0.2s;
+      &:focus {
+         border-color: var(--color-primary-cyan);
+      }
+      &__error {
+         border-color: var(--color-secondary-red);
+      }
+   }
+   &_error {
+      position: absolute;
+      left: 0;
+      bottom: -22px;
+      color: var(--color-secondary-red);
+      font-size: 12px;
+   }
+}

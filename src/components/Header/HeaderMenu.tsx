@@ -7,6 +7,8 @@ import { Button } from '../Button/Button';
 import { HeaderNav } from './HeaderNav';
 import { HeaderMenuProps } from './types';
 import { setLoginModal, setRegistrationModal } from './../../store/slices/modalSlice';
+import { useAuth } from '../../hooks/useAuth';
+import { removeUser } from '../../store/slices/userSlice';
 
 export const HeaderAuth = () => {
    const dispatch = useAppDispatch();
@@ -28,13 +30,19 @@ export const HeaderAuth = () => {
 
 export const HeaderMenu = ({ menuIsActive }: HeaderMenuProps) => {
    const { width } = useResize();
+   const { isAuth } = useAuth();
+   const dispatch = useAppDispatch();
+
+   const logoutHandler = () => {
+      dispatch(removeUser())
+   };
 
    return (
       <>
          {width > 700 && (
             <div className={styles.header_menu}>
                <HeaderNav />
-               <HeaderAuth />
+               {isAuth ? <Button type="button" onClick={logoutHandler}>Logout</Button> : <HeaderAuth />}
             </div>
          )}
          {width <= 700 && (
@@ -46,7 +54,7 @@ export const HeaderMenu = ({ menuIsActive }: HeaderMenuProps) => {
                      exit={{ x: '-60%', opacity: 0 }}
                      className={styles.header_menu}>
                      <HeaderNav />
-                     <HeaderAuth />
+                     {isAuth ? <div>Logout</div> : <HeaderAuth />}
                   </motion.div>
                )}
             </AnimatePresence>
