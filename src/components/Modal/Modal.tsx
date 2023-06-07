@@ -29,6 +29,7 @@ export const Modal: FC<ModalProps> = ({ isActive, children }) => {
                      dispatch(removeError());
                   } else if (e.target.classList.contains(`${styles.modal}`) && registrationModal) {
                      dispatch(setRegistrationModal(false));
+                     dispatch(removeError());
                   }
                }}>
                <motion.div
