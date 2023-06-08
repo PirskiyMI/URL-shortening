@@ -1,7 +1,8 @@
 import styles from './styles/StatCard.module.scss';
 import { StatCardProps } from './types';
+import { FC } from 'react';
 
-export const StatCard = ({ title, text, icon }: StatCardProps) => {
+export const StatCard: FC<StatCardProps> = ({ title, text, icon }) => {
    return (
       <div className={styles.card}>
          <div className={styles.card_icon}>

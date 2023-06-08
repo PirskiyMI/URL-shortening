@@ -4,8 +4,10 @@
    text-transform: capitalize;
    color: white;
    background-color: var(--color-primary-cyan);
-   transition: opacity ease .2s;
-   &:hover {
-      opacity: 0.6;
+   transition: opacity ease 0.2s;
+   @media (any-hover: hover) {
+      &:hover {
+         opacity: 0.6;
+      }
    }
 }

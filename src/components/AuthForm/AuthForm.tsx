@@ -14,10 +14,12 @@ export const AuthForm: FC<AuthFormProps> = ({ title, handleClick }) => {
       register,
       handleSubmit,
       formState: { errors },
+      reset,
    } = useForm();
 
    const onSubmit = (data: any) => {
       handleClick(data.email, data.password);
+      reset();
    };
 
    return (
@@ -52,7 +54,7 @@ export const AuthForm: FC<AuthFormProps> = ({ title, handleClick }) => {
             />
             <span className={styles.form_error}>{errors?.password && 'Enter password'}</span>
          </label>
-         {error && <div style={{color: 'red'}}>{error}</div>}
+         {error && <div style={{ color: 'red' }}>{error}</div>}
          <Button type="submit">{title}</Button>
       </form>
    );

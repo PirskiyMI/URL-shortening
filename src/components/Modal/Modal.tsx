@@ -1,15 +1,11 @@
 import { FC } from 'react';
-import styles from './Modal.module.scss';
+import styles from './styles/Modal.module.scss';
 import { useAppDispatch } from '../../hooks/useAppDispatch';
 import { setLoginModal, setRegistrationModal } from '../../store/slices/modalSlice';
 import { useAppSelector } from '../../hooks/useAppSelector';
 import { AnimatePresence, motion } from 'framer-motion';
 import { removeError } from '../../store/slices/authErrorSlice';
-
-interface ModalProps {
-   isActive: boolean;
-   children: React.ReactNode;
-}
+import { ModalProps } from './types';
 
 export const Modal: FC<ModalProps> = ({ isActive, children }) => {
    const dispatch = useAppDispatch();

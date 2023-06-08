@@ -1,4 +1,4 @@
-import styles from './Button.module.scss';
+import styles from './styles/Button.module.scss';
 import { ButtonProps } from './types';
 
 export const Button = ({ type, children, onClick, radius = 30 }: ButtonProps) => {

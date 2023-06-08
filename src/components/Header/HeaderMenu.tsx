@@ -1,40 +1,26 @@
-import styles from './styles/HeaderMenu.module.scss';
+import { FC } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import styles from './styles/HeaderMenu.module.scss';
+
 import { useResize } from '../../hooks/useResize';
+import { useAuth } from '../../hooks/useAuth';
 import { useAppDispatch } from '../../hooks/useAppDispatch';
 
-import { Button } from '../Button/Button';
-import { HeaderNav } from './HeaderNav';
-import { HeaderMenuProps } from './types';
-import { setLoginModal, setRegistrationModal } from './../../store/slices/modalSlice';
-import { useAuth } from '../../hooks/useAuth';
 import { removeUser } from '../../store/slices/userSlice';
 
-export const HeaderAuth = () => {
-   const dispatch = useAppDispatch();
+import { HeaderMenuProps } from './types';
 
-   return (
-      <div className={styles.header_login}>
-         <button
-            type="button"
-            className={styles.header_item}
-            onClick={() => dispatch(setLoginModal(true))}>
-            Login
-         </button>
-         <Button type="button" onClick={() => dispatch(setRegistrationModal(true))}>
-            sign up
-         </Button>
-      </div>
-   );
-};
+import { HeaderNav } from './HeaderNav';
+import { HeaderAuth } from './HeaderAuth';
+import { Button } from '../Button/Button';
 
-export const HeaderMenu = ({ menuIsActive }: HeaderMenuProps) => {
+export const HeaderMenu: FC<HeaderMenuProps> = ({ menuIsActive }) => {
    const { width } = useResize();
    const { isAuth } = useAuth();
    const dispatch = useAppDispatch();
 
    const logoutHandler = () => {
-      dispatch(removeUser())
+      dispatch(removeUser());
    };
 
    return (
@@ -42,7 +28,13 @@ export const HeaderMenu = ({ menuIsActive }: HeaderMenuProps) => {
          {width > 700 && (
             <div className={styles.header_menu}>
                <HeaderNav />
-               {isAuth ? <Button type="button" onClick={logoutHandler}>Logout</Button> : <HeaderAuth />}
+               {isAuth ? (
+                  <Button type="button" onClick={logoutHandler}>
+                     Logout
+                  </Button>
+               ) : (
+                  <HeaderAuth />
+               )}
             </div>
          )}
          {width <= 700 && (

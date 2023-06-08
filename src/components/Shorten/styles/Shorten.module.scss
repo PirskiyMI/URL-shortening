@@ -1,0 +1,14 @@
+.shorten{
+   background-color: var(--color-neutral-lightGray);
+   padding-top: 80px;
+   &_container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+   }
+   &_body{
+      padding: 15px 24px 15px 24px;
+      background-color: white;
+      border-radius: 4px;
+   }
+}

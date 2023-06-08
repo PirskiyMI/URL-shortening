@@ -9,6 +9,7 @@ import { useAppSelector } from './hooks/useAppSelector';
 import { Modal } from './components/Modal/Modal';
 import { SignUp } from './components/SignUp/SignUp';
 import { SignIn } from './components/SignIn/SignIn';
+import { Shorten } from './components/Shorten/Shorten';
 
 function App() {
    const { registrationModal, loginModal } = useAppSelector((state) => state.modalReducer);
@@ -25,6 +26,7 @@ function App() {
          <main>
             <Hero />
             <Form />
+            <Shorten/>
             <Stat />
             <CallToAction />
          </main>
