@@ -2,11 +2,13 @@ import { Button } from '../Button/Button';
 import styles from './styles/Form.module.scss';
 import { useForm } from 'react-hook-form';
 import cn from 'classnames';
-import { shortenApi } from '../../api/shortenApi';
 import { useState } from 'react';
+import { useAppDispatch } from '../../hooks/useAppDispatch';
+import { fetchShortLinks } from '../../store/actionsCreators/linksActionCreator';
 
 export const Form = () => {
    const [value, setValue] = useState('');
+   const dispatch = useAppDispatch();
    const {
       register,
       reset,
@@ -15,9 +17,7 @@ export const Form = () => {
    } = useForm();
 
    const onSubmit = ({ url }: any) => {
-      const { data } = shortenApi.useFetchShortenLinkQuery(url);
-      console.log(data);
-
+      dispatch(fetchShortLinks(url));
       reset();
    };
    return (

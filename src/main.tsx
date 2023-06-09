@@ -1,15 +1,13 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
 import { setupStore } from './store/index.ts';
+import { setUser } from './store/slices/userSlice.ts';
 import { Provider } from 'react-redux';
 import './firebase.ts';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
-import { setUser } from './store/slices/userSlice.ts';
 
 const store = setupStore();
-
 const auth = getAuth();
 onAuthStateChanged(auth, (user) => {
    if (user) {
@@ -18,9 +16,7 @@ onAuthStateChanged(auth, (user) => {
 });
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-   <React.StrictMode>
-      <Provider store={store}>
-         <App />
-      </Provider>
-   </React.StrictMode>,
+   <Provider store={store}>
+      <App />
+   </Provider>,
 );
