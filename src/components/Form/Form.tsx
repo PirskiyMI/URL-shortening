@@ -5,20 +5,21 @@ import cn from 'classnames';
 import { useState } from 'react';
 import { useAppDispatch } from '../../hooks/useAppDispatch';
 import { fetchShortLinks } from '../../store/actionsCreators/linksActionCreator';
+import { useAppSelector } from '../../hooks/useAppSelector';
 
 export const Form = () => {
+   const isLoading = useAppSelector((state) => state.linkReducer.isLoading);
    const [value, setValue] = useState('');
    const dispatch = useAppDispatch();
    const {
       register,
-      reset,
       formState: { errors },
       handleSubmit,
    } = useForm();
 
    const onSubmit = ({ url }: any) => {
       dispatch(fetchShortLinks(url));
-      reset();
+      setValue('');
    };
    return (
       <section className={styles.form}>
@@ -27,6 +28,7 @@ export const Form = () => {
                <label className={styles.form_label}>
                   <input
                      value={value}
+                     disabled={isLoading}
                      type="url"
                      className={cn(styles.form_field, { [styles.form_field__error]: errors.url })}
                      placeholder="Shorten a link here..."

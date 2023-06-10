@@ -4,7 +4,6 @@ import { AuthForm } from './../AuthForm/AuthForm';
 import { setUser } from '../../store/slices/userSlice';
 import { setRegistrationModal } from '../../store/slices/modalSlice';
 import { setError } from '../../store/slices/authErrorSlice';
-import { createUserData } from '../../functions/createUserData';
 
 export const SignUp = () => {
    const dispatch = useAppDispatch();
@@ -15,7 +14,6 @@ export const SignUp = () => {
          .then(({ user }) => {
             dispatch(setUser({ email: user.email, id: user.uid, token: user.accessToken }));
             dispatch(setRegistrationModal(false));
-            createUserData(user.uid, user.email);
          })
          .catch((error) => {
             const errorMessage = error.message;

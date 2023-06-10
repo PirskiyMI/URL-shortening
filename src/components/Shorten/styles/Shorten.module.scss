@@ -1,4 +1,4 @@
-.shorten{
+.shorten {
    background-color: var(--color-neutral-lightGray);
    padding-top: 80px;
    &_container {
@@ -6,9 +6,29 @@
       flex-direction: column;
       gap: 20px;
    }
-   &_body{
+   &_body {
       padding: 15px 24px 15px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      justify-content: space-between;
       background-color: white;
       border-radius: 4px;
+   }
+   &_link {
+      white-space: nowrap;
+      overflow: hidden;
+      font-size: 1rem;
+      text-overflow: ellipsis;
+      &__short {
+         font-size: 1rem;
+         color: var(--color-primary-cyan);
+      }
+   }
+   @media (min-width: 750px) {
+      &_body {
+         align-items: center;
+         flex-direction: row;
+      }
    }
 }
