@@ -1,11 +1,12 @@
+import { FC } from 'react';
 import { useAppDispatch } from '../../hooks/useAppDispatch';
-import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
-import { AuthForm } from './../AuthForm/AuthForm';
 import { setUser } from '../../store/slices/userSlice';
 import { setRegistrationModal } from '../../store/slices/modalSlice';
 import { setError } from '../../store/slices/authErrorSlice';
+import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
+import { AuthForm } from './../AuthForm/AuthForm';
 
-export const SignUp = () => {
+export const SignUp: FC = () => {
    const dispatch = useAppDispatch();
 
    const handleSignUp = (email: string, password: string) => {

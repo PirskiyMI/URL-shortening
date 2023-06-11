@@ -1,7 +1,8 @@
 import styles from './styles/FooterSocials.module.scss';
+import { FC } from 'react';
 import { FooterSocialsProps, ISocial } from './types';
 
-export const FooterSocials = ({ socials }: FooterSocialsProps) => {
+export const FooterSocials: FC<FooterSocialsProps> = ({ socials }) => {
    return (
       <ul className={styles.socials}>
          {socials.map(({ id, icon: SVG, alt }: ISocial) => (

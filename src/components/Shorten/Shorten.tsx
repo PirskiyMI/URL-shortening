@@ -1,9 +1,9 @@
-import { useAppSelector } from '../../hooks/useAppSelector';
 import styles from './styles/Shorten.module.scss';
 import { FC, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Button } from '../Button/Button';
 import cn from 'classnames';
+import { useAppSelector } from '../../hooks/useAppSelector';
+import { Button } from '../Button/Button';
 
 export const Shorten: FC = () => {
    const [copied, setCopied] = useState<string | null>(null);

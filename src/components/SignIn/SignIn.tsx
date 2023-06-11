@@ -1,11 +1,12 @@
+import { FC } from 'react';
 import { useAppDispatch } from '../../hooks/useAppDispatch';
 import { removeError, setError } from '../../store/slices/authErrorSlice';
 import { setLoginModal } from '../../store/slices/modalSlice';
 import { setUser } from '../../store/slices/userSlice';
-import { AuthForm } from '../AuthForm/AuthForm';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+import { AuthForm } from '../AuthForm/AuthForm';
 
-export const SignIn = () => {
+export const SignIn: FC = () => {
    const dispatch = useAppDispatch();
    const handleSignIn = (email: string, password: string) => {
       const auth = getAuth();
@@ -17,10 +18,10 @@ export const SignIn = () => {
          })
          .catch((error) => {
             let errorMessage = error.message;
-            if(errorMessage === 'Firebase: Error (auth/user-not-found).') {
-               errorMessage = 'User not found'
+            if (errorMessage === 'Firebase: Error (auth/user-not-found).') {
+               errorMessage = 'User not found';
             } else {
-               errorMessage = 'Wrong password'
+               errorMessage = 'Wrong password';
             }
             dispatch(setError(`${errorMessage}`));
          });

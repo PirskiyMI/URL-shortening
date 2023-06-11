@@ -1,13 +1,14 @@
-import { Button } from '../Button/Button';
 import styles from './styles/Form.module.scss';
-import { useForm } from 'react-hook-form';
+import { FC } from 'react';
 import cn from 'classnames';
+import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 import { useAppDispatch } from '../../hooks/useAppDispatch';
-import { fetchShortLinks } from '../../store/actionsCreators/linksActionCreator';
 import { useAppSelector } from '../../hooks/useAppSelector';
+import { fetchShortLinks } from '../../store/actionsCreators/linksActionCreator';
+import { Button } from '../Button/Button';
 
-export const Form = () => {
+export const Form: FC = () => {
    const isLoading = useAppSelector((state) => state.linkReducer.isLoading);
    const [value, setValue] = useState('');
    const dispatch = useAppDispatch();

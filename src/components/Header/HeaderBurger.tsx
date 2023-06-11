@@ -1,7 +1,7 @@
 import styles from './styles/HeaderBurger.module.scss';
+import { FC } from 'react';
 import cn from 'classnames';
 import { HeaderBurgerProps } from './types';
-import { FC } from 'react';
 
 export const HeaderBurger: FC<HeaderBurgerProps> = ({ menuIsActive, onClick }) => {
    return (

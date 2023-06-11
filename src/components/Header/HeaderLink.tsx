@@ -1,6 +1,6 @@
 import styles from './styles/HeaderLink.module.scss';
-import { HeaderLinkProps } from './types';
 import { FC } from 'react';
+import { HeaderLinkProps } from './types';
 
 export const HeaderLink: FC<HeaderLinkProps> = ({ address, title }) => {
    return (

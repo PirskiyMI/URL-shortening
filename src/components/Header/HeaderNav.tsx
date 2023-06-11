@@ -1,6 +1,6 @@
-import { HeaderLink } from './HeaderLink';
 import styles from './styles/HeaderNav.module.scss';
-
+import { FC } from 'react';
+import { HeaderLink } from './HeaderLink';
 
 const linksAddresses = [
    { id: 1, address: '#', title: 'Features' },
@@ -8,7 +8,7 @@ const linksAddresses = [
    { id: 3, address: '#', title: 'Resources' },
 ];
 
-export const HeaderNav = () => {
+export const HeaderNav: FC = () => {
    return (
       <nav className={styles.header_nav}>
          <ul className={styles.header_list}>

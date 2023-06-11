@@ -1,10 +1,10 @@
-import styles from './styles/HeaderAuth.module.scss'
-
+import styles from './styles/HeaderAuth.module.scss';
+import { FC } from 'react';
 import { setLoginModal, setRegistrationModal } from './../../store/slices/modalSlice';
-import { Button } from '../Button/Button';
 import { useAppDispatch } from '../../hooks/useAppDispatch';
+import { Button } from '../Button/Button';
 
-export const HeaderAuth = () => {
+export const HeaderAuth: FC = () => {
    const dispatch = useAppDispatch();
 
    return (

@@ -1,6 +1,6 @@
-import { Button } from '../Button/Button';
 import styles from './styles/Hero.module.scss';
 import cn from 'classnames';
+import { Button } from '../Button/Button';
 
 import image from './../../assets/images/illustration-working.svg';
 

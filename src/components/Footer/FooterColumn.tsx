@@ -1,7 +1,8 @@
 import styles from './styles/FooterColumn.module.scss';
+import { FC } from 'react';
 import { FooterColumnProps, ILink } from './types';
 
-export const FooterColumn = ({ title, links }: FooterColumnProps) => {
+export const FooterColumn: FC<FooterColumnProps> = ({ title, links }) => {
    return (
       <div className={styles.column}>
          <h2 className={styles.column_title}>{title}</h2>

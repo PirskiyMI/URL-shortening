@@ -3,13 +3,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import styles from './styles/HeaderMenu.module.scss';
 
 import { useResize } from '../../hooks/useResize';
+import { removeUser } from '../../store/slices/userSlice';
 import { useAuth } from '../../hooks/useAuth';
 import { useAppDispatch } from '../../hooks/useAppDispatch';
-
-import { removeUser } from '../../store/slices/userSlice';
-
 import { HeaderMenuProps } from './types';
-
 import { HeaderNav } from './HeaderNav';
 import { HeaderAuth } from './HeaderAuth';
 import { Button } from '../Button/Button';

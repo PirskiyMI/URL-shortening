@@ -1,7 +1,8 @@
 import styles from './styles/Button.module.scss';
+import { FC } from 'react';
 import { ButtonProps } from './types';
 
-export const Button = ({ type, children, onClick, radius = 30 }: ButtonProps) => {
+export const Button: FC<ButtonProps> = ({ type, children, onClick, radius = 30 }) => {
    return (
       <button
          type={type}

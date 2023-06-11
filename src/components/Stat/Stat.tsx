@@ -1,9 +1,10 @@
 import styles from './styles/Stat.module.scss';
 import cn from 'classnames';
+import { FC } from 'react';
 import { StatCard } from './StatCard';
 import { data } from './constants';
 
-export const Stat = () => {
+export const Stat: FC = () => {
    return (
       <section className={styles.stat}>
          <div className={cn(styles.stat_container, '_container')}>

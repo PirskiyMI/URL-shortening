@@ -1,7 +1,8 @@
 import styles from './styles/CallToAction.module.scss';
+import { FC } from 'react';
 import { Button } from '../Button/Button';
 
-export const CallToAction = () => {
+export const CallToAction: FC = () => {
    return (
       <section className={styles.call}>
          <div className={styles.call_body}>
