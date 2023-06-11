@@ -1,23 +1,39 @@
 .shorten {
    background-color: var(--color-neutral-lightGray);
    padding-top: 80px;
+   &_body,
+   &_links,
    &_container {
       display: flex;
       flex-direction: column;
+   }
+   &_container {
       gap: 20px;
+   }
+   &_body,
+   &_links {
+      gap: 10px;
+      justify-content: space-between;
    }
    &_body {
       padding: 15px 24px 15px 24px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      justify-content: space-between;
       background-color: white;
       border-radius: 4px;
+      &__active {
+         button {
+            background-color: var(--color-primary-violet);
+         }
+      }
+   }
+   &_links,
+   &_link {
+      overflow: hidden;
+   }
+   &_links {
+      flex: 1 1 auto;
    }
    &_link {
       white-space: nowrap;
-      overflow: hidden;
       font-size: 1rem;
       text-overflow: ellipsis;
       &__short {
@@ -28,6 +44,9 @@
    @media (min-width: 750px) {
       &_body {
          align-items: center;
+         flex-direction: row;
+      }
+      &_links {
          flex-direction: row;
       }
    }
